@@ -1,6 +1,6 @@
 class RemoveTransformationProductSetting < ActiveRecord::Migration[5.0]
   class SettingsChange < ActiveRecord::Base
-    serialize :value
+    serialize :value, :coder => YAML
   end
 
   def up

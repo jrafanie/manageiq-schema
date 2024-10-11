@@ -5,7 +5,7 @@ module Spec
         Class.new(ActiveRecord::Base) do
           self.table_name = "reserves"
           self.inheritance_column = :_type_disabled # disable STI
-          serialize :reserved
+          serialize :reserved, :coder => YAML
         end
       end
     end

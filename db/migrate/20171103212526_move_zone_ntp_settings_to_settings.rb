@@ -1,9 +1,9 @@
 class MoveZoneNtpSettingsToSettings < ActiveRecord::Migration[5.0]
   class SettingsChange < ActiveRecord::Base
-    serialize :value
+    serialize :value, :coder => YAML
   end
   class Zone < ActiveRecord::Base
-    serialize :settings, :type => Hash
+    serialize :settings, :coder => YAML, :type => Hash
   end
 
   def up

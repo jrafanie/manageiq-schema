@@ -1,6 +1,6 @@
 class SeparateRoleAccessRestrictionsForServiceTemplates < ActiveRecord::Migration[6.0]
   class MiqUserRole < ActiveRecord::Base
-    serialize :settings
+    serialize :settings, :coder => YAML
   end
 
   def up

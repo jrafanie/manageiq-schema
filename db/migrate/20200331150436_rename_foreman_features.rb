@@ -2,7 +2,7 @@ class RenameForemanFeatures < ActiveRecord::Migration[5.1]
   class MiqProductFeature < ActiveRecord::Base; end
   class MiqRolesFeature < ActiveRecord::Base; end
   class User < ActiveRecord::Base
-    serialize :settings, :type => Hash
+    serialize :settings, :coder => YAML, :type => Hash
   end
 
   FEATURE_MAPPING = {

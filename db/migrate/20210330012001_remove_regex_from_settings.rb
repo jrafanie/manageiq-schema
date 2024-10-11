@@ -1,6 +1,6 @@
 class RemoveRegexFromSettings < ActiveRecord::Migration[6.0]
   class SettingsChange < ActiveRecord::Base
-    serialize :value
+    serialize :value, :coder => YAML
   end
 
   def up

@@ -1,7 +1,7 @@
 class AddVaultCredentialIdToOptionsInServiceTemplates < ActiveRecord::Migration[6.1]
   class ServiceTemplate < ActiveRecord::Base
     self.inheritance_column = :_type_disabled
-    serialize :options
+    serialize :options, :coder => YAML
   end
 
   def up

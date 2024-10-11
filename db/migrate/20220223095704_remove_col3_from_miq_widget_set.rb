@@ -2,7 +2,7 @@ class RemoveCol3FromMiqWidgetSet < ActiveRecord::Migration[6.0]
   class MiqWidgetSet < ActiveRecord::Base
     include ActiveRecord::IdRegions
     self.table_name = "miq_sets"
-    serialize :set_data
+    serialize :set_data, :coder => YAML
   end
 
   def up

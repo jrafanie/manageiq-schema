@@ -1,6 +1,6 @@
 class ReplaceServerCapabilitiesWithVixDiskLib < ActiveRecord::Migration[5.1]
   class MiqServer < ActiveRecord::Base
-    serialize :capabilities
+    serialize :capabilities, :coder => YAML
     include ActiveRecord::IdRegions
   end
 

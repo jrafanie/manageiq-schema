@@ -3,7 +3,7 @@ class AddConversionHostIdToMiqRequestTasks < ActiveRecord::Migration[5.0]
     self.inheritance_column = :_type_disabled
     include ActiveRecord::IdRegions
 
-    serialize :options, :type => Hash
+    serialize :options, :coder => YAML, :type => Hash
     belongs_to :conversion_host, :class_name => "AddConversionHostIdToMiqRequestTasks::ConversionHost"
   end
 

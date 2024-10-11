@@ -2,7 +2,7 @@ class MoveAwxCredentialsToAuthentications < ActiveRecord::Migration[5.0]
   class Authentication < ActiveRecord::Base
     include ActiveRecord::IdRegions
     self.inheritance_column = :_type_disabled
-    serialize :options
+    serialize :options, :coder => YAML
   end
 
   # This class is port of the code found in both the awx code base, and the
