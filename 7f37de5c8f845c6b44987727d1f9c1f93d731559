@@ -1,0 +1,1 @@
+{"id":"afec8c53-6ee0-44cc-a0a8-28aab6e64ceb","ts":"2025-12-16T21:34:17.830Z","version":"1.0.2","toolName":"apply_diff","taskID":"cea50862-f4cd-423e-a7b6-44a5d9f209bd","path":"db/migrate/20171030131403_collapsed_initial_migration.rb","numLinesApplied":71,"currentRange":{"startLine":7307,"endLine":7377}}
